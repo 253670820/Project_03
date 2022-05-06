@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- 引入jquery -->
+    <script src="./assets/lib/jquery.js"></script>
+    <script>
+        var token=localStorage.getItem('token')
+        $.ajax({
+            type: 'get',
+            url: 'http://192.168.1.34:8022/api/home/test',
+            headers:{
+                'Authorization':'Bearer '+token
+            },
+            success: function (res) {
+                alert(res)
+            }
+        })
+    </script>
 </body>
+
 </html>

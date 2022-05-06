@@ -1,0 +1,61 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    /* 设置背景图片取消平铺并填充整个页面 */
+    background-image:url(../images/login_bg.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.loginAndRegBox{
+    width: 400px;
+    height: 310px;
+    background-color:#fff;
+    /* 绝对定位，设置盒子居中 */
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.title-box{
+    height: 60px;
+    /* 设置背景图片并居中 */
+    background-image: url(../images/login_title.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.reg-box{
+    /* 隐藏 */
+    display: none;
+}
+
+.layui-form{
+    padding: 0 30px;
+}
+
+.links{
+   display: flex;
+   justify-content: flex-end; 
+}
+
+.links a{
+    font-size: 12px;
+}
+
+.layui-form-item{
+    position: relative;
+}
+
+.layui-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input{
+    padding-left: 32px;
+}
