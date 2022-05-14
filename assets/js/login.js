@@ -74,13 +74,14 @@ $(function () {
             type: 'post',
             url: '/api/account/login',
             contentType: 'application/json',
+            // async:false,
             data: JSON.stringify(user),
             success: function (res) {
                 if (res.code !== 200) {
                     // 使用 layui 中的layer(弹出层)提示消息
                     return layer.msg(`用户名或密码错误`)
                 }
-                layer.msg(`${res.token}`)
+                // layer.msg(`${res.token}`)
                 // 将登录成功得到的 token 字符串，保存到 localStorage 中
                 localStorage.setItem('token', res.token)
                 // 跳转到后台主页
