@@ -46,15 +46,15 @@ function getUserInfo() {
 // 渲染用户头像
 function renderAvatar(user) {
     // 获取用户名
-    var name = user.username || user.nickname
+    var name = user.nickname || user.usernmae
     // 设置欢迎的文本
     $('#welcome').html('欢迎&nbsp&nbsp' + name)
 
     // 按需设置用户头像
     if (user.user_pic !== '') {
         // 设置图片头像
-        $('.layui-nav-img').attr(user.user_pic).show()
-        $('').hide()
+        $('.layui-nav-img').attr('src',user.user_pic).show()
+        $('.text-avatar').hide()
     } else {
         // 设置文本头像
         var first = name[0].toUpperCase()
